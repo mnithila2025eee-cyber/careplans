@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Library User Dashboard</title>
+
+    <link rel="stylesheet" href="user-dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-landmark"></i>
+            </div>
+
+            <div>
+                <h2>Municipal Library</h2>
+                <span>Digital Library</span>
+            </div>
+        </div>
+
+
+        <nav>
+
+            <a href="user-dashboard.html" class="active">
+                <i class="fas fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="books.html">
+                <i class="fas fa-book"></i>
+                E-Books
+            </a>
+
+            <a href="my-books.html">
+                <i class="fas fa-book-open"></i>
+                My Books
+            </a>
+
+            <a href="access-records.html">
+                <i class="fas fa-clock-rotate-left"></i>
+                Access History
+            </a>
+
+            <a href="my-licenses.html">
+                <i class="fas fa-file-contract"></i>
+                My Licenses
+            </a>
+
+            <a href="alerts.html">
+                <i class="fas fa-bell"></i>
+                Notifications
+            </a>
+
+            <a href="profile.html">
+                <i class="fas fa-user"></i>
+                My Profile
+            </a>
+
+        </nav>
+
+
+        <div class="logout">
+
+            <a href="index.html">
+                <i class="fas fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>Welcome back! 👋</h1>
+                <p>Access your digital library from one place.</p>
+            </div>
+
+            <div class="user-area">
+
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span>2</span>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-circle">
+                        U
+                    </div>
+
+                    <div>
+                        <strong>Library User</strong>
+                        <small>Member</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <i class="fas fa-search"></i>
+
+            <input
+                type="text"
+                placeholder="Search books by title, author or category..."
+                onkeyup="searchBooks(this.value)"
+            >
+
+        </div>
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    <i class="fas fa-book"></i>
+                </div>
+
+                <div>
+                    <span>Available E-Books</span>
+                    <h2>1,248</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    <i class="fas fa-book-open"></i>
+                </div>
+
+                <div>
+                    <span>My Books</span>
+                    <h2>24</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+
+                <div>
+                    <span>Active License</span>
+                    <h2>18</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon red">
+                    <i class="fas fa-bell"></i>
+                </div>
+
+                <div>
+                    <span>Notifications</span>
+                    <h2>2</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACCESS -->
+
+        <section>
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Quick Access</h2>
+                    <p>Library services available to you</p>
+                </div>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+                <a href="books.html" class="quick-card">
+
+                    <div class="quick-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+
+                    <div>
+                        <h3>Browse E-Books</h3>
+                        <p>Explore the digital collection</p>
+                    </div>
+
+                    <i class="fas fa-arrow-right arrow"></i>
+
+                </a>
+
+
+                <a href="my-books.html" class="quick-card">
+
+                    <div class="quick-icon green-bg">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+
+                    <div>
+                        <h3>My Books</h3>
+                        <p>Continue reading your books</p>
+                    </div>
+
+                    <i class="fas fa-arrow-right arrow"></i>
+
+                </a>
+
+
+                <a href="my-licenses.html" class="quick-card">
+
+                    <div class="quick-icon orange-bg">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+
+                    <div>
+                        <h3>My Licenses</h3>
+                        <p>Check your license status</p>
+                    </div>
+
+                    <i class="fas fa-arrow-right arrow"></i>
+
+                </a>
+
+
+                <a href="access-records.html" class="quick-card">
+
+                    <div class="quick-icon purple-bg">
+                        <i class="fas fa-clock-rotate-left"></i>
+                    </div>
+
+                    <div>
+                        <h3>Access History</h3>
+                        <p>View your recent activity</p>
+                    </div>
+
+                    <i class="fas fa-arrow-right arrow"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECOMMENDED BOOKS -->
+
+        <section class="books-section">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Recommended E-Books</h2>
+                    <p>Explore books from our digital collection</p>
+                </div>
+
+                <a href="books.html">View All</a>
+
+            </div>
+
+
+            <div class="book-grid">
+
+
+                <div class="book-card">
+
+                    <div class="book-cover blue-cover">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+
+                    <div class="book-info">
+
+                        <span class="category">Technology</span>
+
+                        <h3>Digital Electronics</h3>
+
+                        <p>John Smith</p>
+
+                        <a href="book-details.html?book=digital-electronics"
+                           class="view-button">
+                            View Book
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="book-card">
+
+                    <div class="book-cover green-cover">
+                        <i class="fas fa-database"></i>
+                    </div>
+
+                    <div class="book-info">
+
+                        <span class="category">Computer Science</span>
+
+                        <h3>Database Management</h3>
+
+                        <p>Robert Wilson</p>
+
+                        <a href="book-details.html?book=database-management"
+                           class="view-button">
+                            View Book
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="book-card">
+
+                    <div class="book-cover purple-cover">
+                        <i class="fas fa-code"></i>
+                    </div>
+
+                    <div class="book-info">
+
+                        <span class="category">Programming</span>
+
+                        <h3>Java Programming</h3>
+
+                        <p>James Anderson</p>
+
+                        <a href="book-details.html?book=java-programming"
+                           class="view-button">
+                            View Book
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="book-card">
+
+                    <div class="book-cover orange-cover">
+                        <i class="fas fa-robot"></i>
+                    </div>
+
+                    <div class="book-info">
+
+                        <span class="category">Artificial Intelligence</span>
+
+                        <h3>Introduction to AI</h3>
+
+                        <p>David Miller</p>
+
+                        <a href="book-details.html?book=introduction-ai"
+                           class="view-button">
+                            View Book
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOTIFICATION -->
+
+        <section class="notification-box">
+
+            <div class="notification-title">
+                <i class="fas fa-circle-info"></i>
+
+                <div>
+                    <h3>Library Notification</h3>
+                    <p>Your "Digital Marketing" license expires in 7 days.</p>
+                </div>
+            </div>
+
+            <a href="my-licenses.html">
+                View License
+            </a>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script>
+
+function searchBooks(value) {
+
+    if (value.length > 2) {
+
+        window.location.href =
+            "books.html?search=" + encodeURIComponent(value);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

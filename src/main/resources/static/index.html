@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Municipal Library - Login</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f5f7fb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 1000px;
+            max-width: 95%;
+            min-height: 600px;
+            background: white;
+            display: flex;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .left {
+            width: 50%;
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: white;
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .left h1 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .left h2 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 35px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            font-size: 15px;
+        }
+
+        .feature i {
+            width: 35px;
+            font-size: 20px;
+        }
+
+        .right {
+            width: 50%;
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right h2 {
+            font-size: 28px;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .input-box {
+            position: relative;
+        }
+
+        .input-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 13px 45px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .input-box input:focus {
+            border-color: #2563eb;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #6b7280;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 13px;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .forgot {
+            color: #2563eb;
+            cursor: pointer;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .secure {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .left {
+                padding: 40px;
+            }
+
+            .right {
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+
+        <h1>Municipal Library</h1>
+
+        <h2>Digital Library Management</h2>
+
+        <div class="feature">
+            <i class="fa-solid fa-book"></i>
+            <span>E-Book Management</span>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-file-contract"></i>
+            <span>License Tracking</span>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-folder-open"></i>
+            <span>Digital Asset Management</span>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>SECURE LIBRARY ACCESS</span>
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+
+        <h2>Welcome Back</h2>
+
+        <p class="subtitle">
+            Sign in to access your digital library
+        </p>
+
+        <form id="loginForm">
+
+            <!-- EMAIL -->
+            <div class="input-group">
+
+                <label>Email Address</label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+            <div class="input-group">
+
+                <label>Password</label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                    <span
+                        class="password-toggle"
+                        onclick="togglePassword()"
+                    >
+                        <i class="fa-solid fa-eye" id="eyeIcon"></i>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- OPTIONS -->
+            <div class="options">
+
+                <div class="remember">
+
+                    <input type="checkbox" id="remember">
+
+                    <label for="remember">
+                        Remember me
+                    </label>
+
+                </div>
+
+                <span class="forgot">
+                    Forgot password?
+                </span>
+
+            </div>
+
+
+            <!-- LOGIN BUTTON -->
+            <button
+                type="submit"
+                class="login-btn"
+            >
+                Sign In
+            </button>
+
+        </form>
+
+
+        <div class="secure">
+            <i class="fa-solid fa-lock"></i>
+            Secure Library Portal
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    // SHOW / HIDE PASSWORD
+    function togglePassword() {
+
+        const password =
+            document.getElementById("password");
+
+        const eyeIcon =
+            document.getElementById("eyeIcon");
+
+        if (password.type === "password") {
+
+            password.type = "text";
+
+            eyeIcon.classList.remove("fa-eye");
+
+            eyeIcon.classList.add("fa-eye-slash");
+
+        } else {
+
+            password.type = "password";
+
+            eyeIcon.classList.remove("fa-eye-slash");
+
+            eyeIcon.classList.add("fa-eye");
+        }
+    }
+
+
+    // LOGIN
+    document
+        .getElementById("loginForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const email =
+                document.getElementById("email").value;
+
+            const password =
+                document.getElementById("password").value;
+
+
+            // DEMO LOGIN
+            if (
+                email === "admin@library.com" &&
+                password === "admin123"
+            ) {
+
+                // CHANGED HERE
+                window.location.href =
+                    "user-dashboard.html";
+
+            } else {
+
+                alert("Invalid email or password.");
+
+            }
+
+        });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Notifications</title>
+
+<link rel="stylesheet" href="user-dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+.alerts {
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.alert {
+
+background:white;
+
+padding:20px;
+
+border-radius:12px;
+
+display:flex;
+
+gap:15px;
+
+align-items:center;
+
+box-shadow:0 3px 15px rgba(30,50,90,.05);
+
+}
+
+.alert-icon {
+
+width:45px;
+
+height:45px;
+
+border-radius:10px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.warning {
+
+background:#fef3c7;
+
+color:#d97706;
+
+}
+
+.info {
+
+background:#dbeafe;
+
+color:#2563eb;
+
+}
+
+.alert h3 {
+
+font-size:12px;
+
+}
+
+.alert p {
+
+font-size:10px;
+
+color:#8992a5;
+
+margin-top:5px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<div class="logo-icon">
+<i class="fas fa-landmark"></i>
+</div>
+
+<div>
+<h2>Municipal Library</h2>
+<span>Digital Library</span>
+</div>
+
+</div>
+
+
+<nav>
+
+<a href="user-dashboard.html">
+<i class="fas fa-house"></i>
+Dashboard
+</a>
+
+<a href="books.html">
+<i class="fas fa-book"></i>
+E-Books
+</a>
+
+<a href="my-books.html">
+<i class="fas fa-book-open"></i>
+My Books
+</a>
+
+<a href="access-records.html">
+<i class="fas fa-clock-rotate-left"></i>
+Access History
+</a>
+
+<a href="my-licenses.html">
+<i class="fas fa-file-contract"></i>
+My Licenses
+</a>
+
+<a href="alerts.html" class="active">
+<i class="fas fa-bell"></i>
+Notifications
+</a>
+
+<a href="profile.html">
+<i class="fas fa-user"></i>
+My Profile
+</a>
+
+</nav>
+
+
+<div class="logout">
+
+<a href="index.html">
+<i class="fas fa-right-from-bracket"></i>
+Logout
+</a>
+
+</div>
+
+</aside>
+
+
+<main class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1>Notifications</h1>
+
+<p>Library alerts and important updates</p>
+
+</div>
+
+</header>
+
+
+<div class="alerts">
+
+
+<div class="alert">
+
+<div class="alert-icon warning">
+
+<i class="fas fa-clock"></i>
+
+</div>
+
+<div>
+
+<h3>License Expiring Soon</h3>
+
+<p>
+Your Digital Marketing license will expire
+in 7 days.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="alert">
+
+<div class="alert-icon info">
+
+<i class="fas fa-circle-info"></i>
+
+</div>
+
+<div>
+
+<h3>New E-Books Available</h3>
+
+<p>
+New technology books have been added to
+the municipal digital library.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</main>
+
+</div>
+
+</body>
+
+</html>

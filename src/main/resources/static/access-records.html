@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Access History</title>
+
+<link rel="stylesheet" href="user-dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+.history-table {
+
+background:white;
+
+padding:25px;
+
+border-radius:14px;
+
+}
+
+table {
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+th,td {
+
+padding:15px;
+
+text-align:left;
+
+border-bottom:1px solid #edf0f5;
+
+font-size:11px;
+
+}
+
+th {
+
+color:#7c879a;
+
+}
+
+.status {
+
+padding:5px 9px;
+
+border-radius:5px;
+
+background:#dcfce7;
+
+color:#15803d;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<div class="logo-icon">
+<i class="fas fa-landmark"></i>
+</div>
+
+<div>
+<h2>Municipal Library</h2>
+<span>Digital Library</span>
+</div>
+
+</div>
+
+
+<nav>
+
+<a href="user-dashboard.html">
+<i class="fas fa-house"></i>
+Dashboard
+</a>
+
+<a href="books.html">
+<i class="fas fa-book"></i>
+E-Books
+</a>
+
+<a href="my-books.html">
+<i class="fas fa-book-open"></i>
+My Books
+</a>
+
+<a href="access-records.html" class="active">
+<i class="fas fa-clock-rotate-left"></i>
+Access History
+</a>
+
+<a href="my-licenses.html">
+<i class="fas fa-file-contract"></i>
+My Licenses
+</a>
+
+<a href="alerts.html">
+<i class="fas fa-bell"></i>
+Notifications
+</a>
+
+<a href="profile.html">
+<i class="fas fa-user"></i>
+My Profile
+</a>
+
+</nav>
+
+
+<div class="logout">
+
+<a href="index.html">
+<i class="fas fa-right-from-bracket"></i>
+Logout
+</a>
+
+</div>
+
+</aside>
+
+
+<main class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1>Access History</h1>
+
+<p>View your digital library activity</p>
+
+</div>
+
+</header>
+
+
+<div class="history-table">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>E-Book</th>
+
+<th>Access Type</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+<tr>
+
+<td>Digital Electronics</td>
+
+<td>Read</td>
+
+<td>28 Sep 2026</td>
+
+<td>
+<span class="status">Successful</span>
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Database Management</td>
+
+<td>Download</td>
+
+<td>27 Sep 2026</td>
+
+<td>
+<span class="status">Successful</span>
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Java Programming</td>
+
+<td>Read</td>
+
+<td>25 Sep 2026</td>
+
+<td>
+<span class="status">Successful</span>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</main>
+
+</div>
+
+</body>
+
+</html>

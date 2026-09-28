@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Library Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo-section">
+            <div class="logo-icon">
+                <i class="fas fa-landmark"></i>
+            </div>
+
+            <div>
+                <h2>Municipal Library</h2>
+                <span>Digital Management</span>
+            </div>
+        </div>
+
+        <nav class="navigation">
+
+            <a href="dashboard.html" class="nav-item active">
+                <i class="fas fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="books.html" class="nav-item">
+                <i class="fas fa-book"></i>
+                <span>E-Books</span>
+            </a>
+
+            <a href="members.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Members</span>
+            </a>
+
+            <a href="licenses.html" class="nav-item">
+                <i class="fas fa-file-contract"></i>
+                <span>Licenses</span>
+            </a>
+
+            <a href="digital-assets.html" class="nav-item">
+                <i class="fas fa-folder-open"></i>
+                <span>Digital Assets</span>
+            </a>
+
+            <a href="access-records.html" class="nav-item">
+                <i class="fas fa-clock-rotate-left"></i>
+                <span>Access Records</span>
+            </a>
+
+            <a href="alerts.html" class="nav-item">
+                <i class="fas fa-bell"></i>
+                <span>License Alerts</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-item">
+                <i class="fas fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+            <a href="index.html" class="nav-item logout">
+                <i class="fas fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome back, Administrator</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="admin-profile">
+
+                    <div class="profile-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+
+                    <div>
+                        <strong>Administrator</strong>
+                        <small>Library Admin</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon books-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+
+                <div class="stat-info">
+                    <span>Total E-Books</span>
+                    <h2>1,248</h2>
+                    <p class="positive">
+                        <i class="fas fa-arrow-up"></i>
+                        8.4% this month
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon members-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+
+                <div class="stat-info">
+                    <span>Active Members</span>
+                    <h2>3,526</h2>
+                    <p class="positive">
+                        <i class="fas fa-arrow-up"></i>
+                        5.2% this month
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon license-icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+
+                <div class="stat-info">
+                    <span>Active Licenses</span>
+                    <h2>186</h2>
+                    <p class="positive">
+                        <i class="fas fa-arrow-up"></i>
+                        3.7% this month
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon alert-icon">
+                    <i class="fas fa-triangle-exclamation"></i>
+                </div>
+
+                <div class="stat-info">
+                    <span>Expiring Soon</span>
+                    <h2>12</h2>
+                    <p class="warning-text">
+                        Requires attention
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MAIN GRID -->
+        <section class="content-grid">
+
+
+            <!-- RECENT ACCESS -->
+            <div class="panel recent-access">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h3>Recent E-Book Access</h3>
+                        <p>Latest member activity</p>
+                    </div>
+
+                    <a href="access-records.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Member</th>
+                                <th>E-Book</th>
+                                <th>Access Type</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <div class="member">
+                                        <div class="avatar">AK</div>
+                                        <span>Arun Kumar</span>
+                                    </div>
+                                </td>
+
+                                <td>Digital Electronics</td>
+
+                                <td>
+                                    <span class="access-badge">Read</span>
+                                </td>
+
+                                <td>28 Sep 2026</td>
+
+                                <td>
+                                    <span class="status active-status">
+                                        Active
+                                    </span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="member">
+                                        <div class="avatar">SM</div>
+                                        <span>Sri Meena</span>
+                                    </div>
+                                </td>
+
+                                <td>Database Management</td>
+
+                                <td>
+                                    <span class="access-badge">Download</span>
+                                </td>
+
+                                <td>28 Sep 2026</td>
+
+                                <td>
+                                    <span class="status active-status">
+                                        Active
+                                    </span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="member">
+                                        <div class="avatar">RV</div>
+                                        <span>Rahul Varma</span>
+                                    </div>
+                                </td>
+
+                                <td>Java Programming</td>
+
+                                <td>
+                                    <span class="access-badge">Read</span>
+                                </td>
+
+                                <td>27 Sep 2026</td>
+
+                                <td>
+                                    <span class="status active-status">
+                                        Active
+                                    </span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="member">
+                                        <div class="avatar">NP</div>
+                                        <span>Naveen Prakash</span>
+                                    </div>
+                                </td>
+
+                                <td>Artificial Intelligence</td>
+
+                                <td>
+                                    <span class="access-badge">Read</span>
+                                </td>
+
+                                <td>27 Sep 2026</td>
+
+                                <td>
+                                    <span class="status expired-status">
+                                        Expired
+                                    </span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- LICENSE ALERTS -->
+            <div class="panel alerts-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h3>License Alerts</h3>
+                        <p>Licenses requiring attention</p>
+                    </div>
+
+                    <a href="alerts.html">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="alert-list">
+
+                    <div class="alert-item danger">
+
+                        <div class="alert-icon-small">
+                            <i class="fas fa-circle-exclamation"></i>
+                        </div>
+
+                        <div>
+                            <strong>License Expiring</strong>
+                            <p>Digital Marketing – 3 days left</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert-item warning">
+
+                        <div class="alert-icon-small">
+                            <i class="fas fa-clock"></i>
+                        </div>
+
+                        <div>
+                            <strong>Renewal Required</strong>
+                            <p>Python Programming – 7 days left</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert-item warning">
+
+                        <div class="alert-icon-small">
+                            <i class="fas fa-clock"></i>
+                        </div>
+
+                        <div>
+                            <strong>License Expiring</strong>
+                            <p>Web Development – 12 days left</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert-item info">
+
+                        <div class="alert-icon-small">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+
+                        <div>
+                            <strong>License Renewal</strong>
+                            <p>Cloud Computing – 20 days left</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+        <section class="panel quick-actions">
+
+            <div class="panel-header">
+
+                <div>
+                    <h3>Quick Actions</h3>
+                    <p>Frequently used library operations</p>
+                </div>
+
+            </div>
+
+
+            <div class="action-grid">
+
+                <a href="books.html" class="action-card">
+
+                    <div>
+                        <i class="fas fa-plus"></i>
+                    </div>
+
+                    <span>Add E-Book</span>
+
+                </a>
+
+
+                <a href="members.html" class="action-card">
+
+                    <div>
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+
+                    <span>Add Member</span>
+
+                </a>
+
+
+                <a href="licenses.html" class="action-card">
+
+                    <div>
+                        <i class="fas fa-file-circle-plus"></i>
+                    </div>
+
+                    <span>Create License</span>
+
+                </a>
+
+
+                <a href="digital-assets.html" class="action-card">
+
+                    <div>
+                        <i class="fas fa-cloud-arrow-up"></i>
+                    </div>
+
+                    <span>Upload Asset</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Book Details | Municipal Library</title>
+
+<link rel="stylesheet" href="user-dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+.book-details {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    display: flex;
+
+    gap: 30px;
+
+    box-shadow: 0 3px 15px rgba(30,50,90,.05);
+
+}
+
+.details-cover {
+
+    width: 220px;
+
+    height: 290px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(135deg,#2563eb,#1e40af);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 70px;
+
+}
+
+.details-content {
+
+    flex: 1;
+
+}
+
+.details-content h1 {
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+
+}
+
+.author {
+
+    color: #64748b;
+
+    margin-bottom: 20px;
+
+}
+
+.description {
+
+    color: #64748b;
+
+    line-height: 1.7;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+
+}
+
+.info-row {
+
+    display: flex;
+
+    gap: 50px;
+
+    margin-bottom: 20px;
+
+}
+
+.info-row strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: #8992a5;
+
+    margin-bottom: 5px;
+
+}
+
+.info-row span {
+
+    font-size: 12px;
+
+}
+
+.buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+.btn {
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+.read {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+.download {
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<div class="logo-icon">
+<i class="fas fa-landmark"></i>
+</div>
+
+<div>
+<h2>Municipal Library</h2>
+<span>Digital Library</span>
+</div>
+
+</div>
+
+
+<nav>
+
+<a href="user-dashboard.html">
+<i class="fas fa-house"></i>
+Dashboard
+</a>
+
+<a href="books.html" class="active">
+<i class="fas fa-book"></i>
+E-Books
+</a>
+
+<a href="my-books.html">
+<i class="fas fa-book-open"></i>
+My Books
+</a>
+
+<a href="access-records.html">
+<i class="fas fa-clock-rotate-left"></i>
+Access History
+</a>
+
+<a href="my-licenses.html">
+<i class="fas fa-file-contract"></i>
+My Licenses
+</a>
+
+<a href="alerts.html">
+<i class="fas fa-bell"></i>
+Notifications
+</a>
+
+<a href="profile.html">
+<i class="fas fa-user"></i>
+My Profile
+</a>
+
+</nav>
+
+
+<div class="logout">
+
+<a href="index.html">
+<i class="fas fa-right-from-bracket"></i>
+Logout
+</a>
+
+</div>
+
+</aside>
+
+
+<main class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1>Book Details</h1>
+
+<p>View digital book information</p>
+
+</div>
+
+</header>
+
+
+<div class="book-details">
+
+
+<div class="details-cover">
+
+<i class="fas fa-book"></i>
+
+</div>
+
+
+<div class="details-content">
+
+<h1>Digital Electronics</h1>
+
+<p class="author">
+Written by John Smith
+</p>
+
+
+<p class="description">
+
+This digital book provides an introduction to
+digital electronics, logic gates, digital circuits,
+Boolean algebra and basic electronic systems.
+
+</p>
+
+
+<div class="info-row">
+
+<div>
+
+<strong>ISBN</strong>
+
+<span>978-1234567890</span>
+
+</div>
+
+
+<div>
+
+<strong>Category</strong>
+
+<span>Technology</span>
+
+</div>
+
+
+<div>
+
+<strong>License</strong>
+
+<span>Active</span>
+
+</div>
+
+</div>
+
+
+<div class="buttons">
+
+<button class="btn read"
+onclick="readBook()">
+
+<i class="fas fa-book-open"></i>
+&nbsp; Read E-Book
+
+</button>
+
+
+<button class="btn download"
+onclick="downloadBook()">
+
+<i class="fas fa-download"></i>
+&nbsp; Download
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+
+<script>
+
+function readBook() {
+
+    alert("E-Book access granted. The digital book will open here.");
+
+}
+
+
+function downloadBook() {
+
+    alert("Your licensed digital asset is ready for download.");
+
+}
+
+</script>
+
+</body>
+
+</html>
